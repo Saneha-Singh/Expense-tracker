@@ -30,9 +30,9 @@ function renderTransaction(){
         descSpan.textContent = transaction.description;
         
         if(transaction.type === "income"){
-            amountSpan.textContent = `+${transaction.amount}`;
+            amountSpan.textContent = `+${(Number(transaction.amount)).toLocaleString("en-IN")}`;
         }else{
-            amountSpan.textContent = `-${transaction.amount}`;
+            amountSpan.textContent = `-${(Number(transaction.amount)).toLocaleString("en-IN")}`;
         }
 
         // delbtn.textContent="Delete";
@@ -86,10 +86,10 @@ function updateTotals(){
             expense += Number(transaction.amount);
         }
     })
-    totalIncome.textContent = `₹${income}`;
-    totalExpense.textContent = `₹${expense}`;
+    totalIncome.textContent = `₹${income.toLocaleString("en-IN")}`;
+    totalExpense.textContent = `₹${expense.toLocaleString("en-IN")}`;
    
-    balance.textContent = `₹${income-expense}`;
+    balance.textContent = `₹${(income-expense).toLocaleString("en-IN")}`;
 }
 
 filter.addEventListener("change", filterTransactions);
