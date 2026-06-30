@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <script src="https://kit.fontawesome.com/ab1c1d33fa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="tracker">
+
+      <!-- Header -->
+      <header class="tracker-header">
+        <h1>Expense Tracker</h1>
+        <p>Track your income and expenses</p>
+      </header>
+      
+
+      <!-- Summary cards -->
+      <section class="summary">
+        <div class="card income">
+          <h3>Income</h3>
+          <p id="income">₹0</p>
+        </div>
+
+        <div class="card expense">
+          <h3>Expense</h3>
+          <p id="expense">₹0</p>
+        </div>
+
+        <div class="card balance">
+          <h3>Balance</h3>
+          <p id="balance">₹0</p>
+        </div>
+      </section>
+
+      <!-- Form -->
+      <form class="transaction-form">
+        <input type="text" placeholder="Description" id="desc"/>
+        <input type="number" placeholder="Amount" id="amount"/>
+
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+
+        <button type="submit" id="submit-btn">Add</button>
+      </form>
+
+      <p id="error-message"></p>
+
+<div class="filter-container">
+    <label for="filter">Show:</label>
+
+    <select id="filter">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+</div>
+
+      <!-- Transaction list -->
+      <section class="transactions">
+        <h2>History</h2>
+
+        <ul class="transaction-list">
+          <!-- <li class="transaction income">
+            <span>Salary</span>
+            <span>+₹5000</span>
+          </li>
+
+          <li class="transaction expense">
+            <span>Food</span>
+            <span>-₹200</span>
+          </li> -->
+        </ul>
+      </section>
+
+    </section>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
